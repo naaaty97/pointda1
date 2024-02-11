@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Point da Lu </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <br><br><br>
+    <main class="apresentacao">
+        <section class="apresentacao__conteudo">
+        <h1 class="apresentacao__conteudo__titulo"><br><br><br> POINT DA LU <br> <strong class="titulo-destaque"> Ambiente acochegante e familiar, com lanches deliciosos e bebida gelada!  </strong></h1>
+    <p class="apresentacao__conteudo__texto"> BATATA FRITA, CALDO, <strong> PASTEIS </strong> , COXINHA. Embreve novidades... </p>
+   <div class="apresentacao__links">
+    <h2 class="apresentacao__links__subtitulo">  </h2>
+    <a class="apresentacao__links__link" href="https://www.instagram.com/pointdalu01/" target="_blank"> INSTAGRAM </a>
+        <a class="apresentacao__links__link" href="cardapio point da lu ok (1).pdf" target="_blank"> CARDAPIO </a>
+        <div class="apresentacao__links__link">
+        <a id="payment-button" > PAGAMENTO </a>
+        <input class="ipu" type="text" id="pix-code" value="00020126360014br.gov.bcb.pix0114+55719833535405204000053039865802BR5923Luciano Rodrigues Couto6008Brasilia62080504mpda63047F31" readonly>
+   </div>
+        <script>
+          // Seleciona o botão de pagamento
+          var paymentButton = document.getElementById("payment-button");
+          // Adiciona um evento de clique ao botão
+          paymentButton.addEventListener("click", function() {
+            // Solicita a permissão do usuário para acessar a área de transferência
+            navigator.clipboard.writeText("")
+              .then(function() {
+                // Seleciona o código Pix
+                var pixCode = document.getElementById("pix-code").value;
+                // Copia o código Pix para a área de transferência
+                navigator.clipboard.writeText(pixCode)
+                  .then(function() {
+                    // Mostra uma mensagem de confirmação
+                    alert("Código Pix Copia e Cola copiado!");
+                  })
+                  .catch(function(error) {
+                    // Mostra uma mensagem de erro
+                    alert("Erro ao copiar o código Pix: " + error);
+                  });
+              })
+              .catch(function(error) {
+                // Mostra uma mensagem de erro
+                alert("Erro ao solicitar a permissão: " + error);
+              });
+          });
+        </script>
+        </div>
+   </section>
+   </main>
+   <br><br>
+   <a href="https://api.whatsapp.com/send?phone=5571983353540" target="_blank"><img src="btnWhatsapp.png" style="position: fixed; bottom: 0px; right: 8px; z-index: 100;"/></a>
+    <footer class="rodape">
+        <p> POINT DA LU, AGRADECE A PREFERÊNCIA </p>
+    </footer>
+</body>
+</html>
